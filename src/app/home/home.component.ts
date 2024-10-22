@@ -15,19 +15,19 @@ import {HousingLocation} from '../housinglocation';
       </form>
     </section>
     <section class="results">
-      <app-housing-location>[housingLocation]="housingLocation"></app-housing-location>
+      <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
     </section>
   `,
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  readonly baseUrl:string = 'https://angular.dev/assets/images/tutorials/common';
+  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
   housingLocation: HousingLocation = {
     id: 9999,
     name: 'Test Home',
     city: 'Test city',
     state: 'ST',
-    photo: `${this.baseUrl}/example-house.jpg`,
+    photo: `https://angular.dev/assets/images/tutorials/common/example-house.jpg`,
     availableUnits: 99,
     wifi: true,
     laundry: false,
